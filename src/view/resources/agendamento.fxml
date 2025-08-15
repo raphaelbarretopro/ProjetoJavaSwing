@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AgendamentoController" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+    <Label text="Agendar Serviço" style="-fx-font-weight: bold;"/>
+    <HBox spacing="5">
+        <Label text="ID do Cliente:"/>
+        <TextField fx:id="clienteIdField" promptText="ID do Cliente"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Placa do Veículo:"/>
+        <TextField fx:id="veiculoPlacaField" promptText="Placa do Veículo"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Descrição do Serviço:"/>
+        <TextField fx:id="servicoDescricaoField" promptText="Descrição do Serviço"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Data do Agendamento:"/>
+        <DatePicker fx:id="dataAgendamentoPicker"/>
+    </HBox>
+
+    <Button text="Agendar Serviço" onAction="#handleAgendarServico"/>
+
+    <Label text="Detalhes do Agendamento:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="detalhesAgendamentoArea" editable="false" prefHeight="100"/>
+</VBox>

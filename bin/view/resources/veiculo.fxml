@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VeiculoController" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+    <Label text="Cadastro de Veículo" style="-fx-font-weight: bold;"/>
+    <HBox spacing="5">
+        <Label text="Marca:"/>
+        <TextField fx:id="marcaField" promptText="Ex: Ford"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Modelo:"/>
+        <TextField fx:id="modeloField" promptText="Ex: Focus"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Ano:"/>
+        <TextField fx:id="anoField" promptText="Ex: 2020"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Placa:"/>
+        <TextField fx:id="placaField" promptText="Ex: ABC-1234"/>
+    </HBox>
+
+    <Button text="Cadastrar Veículo" onAction="#handleCadastrarVeiculo"/>
+
+    <Label text="Detalhes do Veículo Cadastrado:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="detalhesVeiculoArea" editable="false" prefHeight="100"/>
+</VBox>

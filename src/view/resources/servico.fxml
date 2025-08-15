@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServicoController" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+    <Label text="Cadastro de Serviço" style="-fx-font-weight: bold;"/>
+    <HBox spacing="5">
+        <Label text="Descrição:"/>
+        <TextField fx:id="descricaoField" promptText="Ex: Troca de óleo"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Custo:"/>
+        <TextField fx:id="custoField" promptText="Ex: 150.00"/>
+    </HBox>
+    <HBox spacing="5">
+        <Label text="Tempo Estimado (h):"/>
+        <TextField fx:id="tempoEstimadoField" promptText="Ex: 2.5"/>
+    </HBox>
+    
+    <Button text="Cadastrar Serviço" onAction="#handleCadastrarServico"/>
+    
+    <Label text="Detalhes do Serviço Cadastrado:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="detalhesServicoArea" editable="false" prefHeight="100"/>
+</VBox>
